@@ -41,64 +41,21 @@ struct ContentView: View {
             
             Spacer()
             
-            Group{
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 105))]) {
                 ForEach(Dice.allCases, id: \.self) { dice in
                     Button("\(dice.rawValue)-sides") {
                         resultMessage = "You rolled a \(dice.roll()) on a \(dice.rawValue)-sided dice"
                     }
                 }
+                .buttonStyle(.borderedProminent)
+                .tint(.red)
+
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.red)
-            
-            
-            
-//            Group {
-//                HStack {
-//                    Button("\(Dice.four.rawValue)-sides") {
-//                        resultMessage = "You rolled a \(Dice.four.roll()) on a \(Dice.four.rawValue)-sided dice"
-//                    }
-//
-//                    Spacer()
-//
-//                    Button("\(Dice.six.rawValue)-sides") {
-//                        resultMessage = "You rolled a \(Dice.six.roll()) on a \(Dice.six.rawValue)-sided dice"
-//                    }
-//
-//                    Spacer()
-//
-//                    Button("\(Dice.eight.rawValue)-sides") {
-//                        resultMessage = "You rolled a \(Dice.eight.roll()) on a \(Dice.eight.rawValue)-sided dice"
-//                    }
-//                }
-//
-//                HStack {
-//                    Button("\(Dice.ten.rawValue)-sides") {
-//                        resultMessage = "You rolled a \(Dice.ten.roll()) on a \(Dice.ten.rawValue)-sided dice"
-//                    }
-//
-//                    Spacer()
-//
-//                    Button("\(Dice.twelve.rawValue)-sides") {
-//                        resultMessage = "You rolled a \(Dice.twelve.roll()) on a \(Dice.twelve.rawValue)-sided dice"
-//                    }
-//
-//                    Spacer()
-//
-//                    Button("\(Dice.twenty.rawValue)-sides") {
-//                        resultMessage = "You rolled a \(Dice.twenty.roll()) on a \(Dice.twenty.rawValue)-sided dice"
-//                    }
-//                }
-//                    Button("\(Dice.hundred.rawValue)-sides") {
-//                        resultMessage = "You rolled a \(Dice.hundred.roll()) on a \(Dice.hundred.rawValue)-sided dice"
-//                    }
-//                }
-//                .buttonStyle(.borderedProminent)
-//                .tint(.red)
-            }
-            .padding()
+
         }
+        .padding()
     }
+}
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
