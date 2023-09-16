@@ -11,6 +11,7 @@
 		154461BD2AB0E397000063D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154461BC2AB0E397000063D4 /* ContentView.swift */; };
 		154461BF2AB0E399000063D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154461BE2AB0E399000063D4 /* Assets.xcassets */; };
 		154461C22AB0E399000063D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154461C12AB0E399000063D4 /* Preview Assets.xcassets */; };
+		1599348F2AB6052200CF9243 /* ButtonLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1599348E2AB6052200CF9243 /* ButtonLayoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		154461BC2AB0E397000063D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		154461BE2AB0E399000063D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		154461C12AB0E399000063D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1599348E2AB6052200CF9243 /* ButtonLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				154461BA2AB0E397000063D4 /* DiceApp.swift */,
 				154461BC2AB0E397000063D4 /* ContentView.swift */,
+				1599348E2AB6052200CF9243 /* ButtonLayoutView.swift */,
 				154461BE2AB0E399000063D4 /* Assets.xcassets */,
 				154461C02AB0E399000063D4 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				154461BD2AB0E397000063D4 /* ContentView.swift in Sources */,
+				1599348F2AB6052200CF9243 /* ButtonLayoutView.swift in Sources */,
 				154461BB2AB0E397000063D4 /* DiceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
