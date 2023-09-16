@@ -32,18 +32,11 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Text("Dungeon Dice")
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                    .foregroundColor(.red)
+                titleView
                 
                 Spacer()
                 
-                Text(resultMessage)
-                    .font(.largeTitle)
-                    .fontWeight(.medium)
-                    .multilineTextAlignment(.center)
-                    .frame(height: 150)
+                resultMessegeView
                 
                 Spacer()
                 
@@ -71,17 +64,17 @@ struct ContentView: View {
             }
             .padding()
             .onChange(of: geo.size.width, perform: { newValue in
-                arrangeGridItems(geo: geo)
+                arrangeGridItems(diviceWidth: geo.size.width)
             })
             .onAppear {
-                arrangeGridItems(geo: geo)
+                arrangeGridItems(diviceWidth: geo.size.width)
             }
         }
        
     }
     
-    func arrangeGridItems(geo: GeometryProxy) {
-        var screenWidth = geo.size.width - horizontalPadding * 2 //padding on both sides
+    func arrangeGridItems(diviceWidth: CGFloat) {
+        var screenWidth = diviceWidth - horizontalPadding * 2 //padding on both sides
         if Dice.allCases.count > 1 {
             screenWidth += spacing
         }
@@ -90,6 +83,22 @@ struct ContentView: View {
         let numberOfButtonPerRow = Int(screenWidth) / Int(buttonWidth + spacing)
         buttonsLeftOver = Dice.allCases.count % numberOfButtonPerRow
         print("numberOfButtonsPerRow = \(numberOfButtonPerRow)")
+    }
+}
+
+extension ContentView {
+   private var titleView: some View {
+       return Text("Dungeon Dice")
+            .font(.largeTitle)
+            .fontWeight(.black)
+            .foregroundColor(.red)
+    }
+   private var resultMessegeView: some View {
+        return Text(resultMessage)
+            .font(.largeTitle)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .frame(height: 150)
     }
 }
     
